@@ -1,0 +1,31 @@
+{
+  "name": "pxblue_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harjap1996/PxBlue-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harjap1996/PxBlue-Project/issues"
+  },
+  "homepage": "https://github.com/Harjap1996/PxBlue-Project#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.9"
+  }
+}
