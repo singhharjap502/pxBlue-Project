@@ -1,4 +1,5 @@
 const path = require('path');
+const multi = require('multi-loader')
 
 module.exports = {
   entry: './src/index.js',
@@ -17,7 +18,8 @@ module.exports = {
             presets: ['@babel/preset-react']
           }
         }
-      }
+      },
+      {test:/\.css$/,use:["style-loader","css-loader"]}
     ]
   }
 };
