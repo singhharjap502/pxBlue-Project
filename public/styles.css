@@ -1,11 +1,12 @@
 .cards {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .card {
-  flex-grow: 0.15;
+  width: 10cm;
 }
 .cardHeader {
   background-color: skyblue;
@@ -13,6 +14,9 @@
   color: azure;
 }
 
+.card_content{
+  align-items: stretch;
+}
 .cardHeader:hover {
   background-color: brown;
 }
@@ -23,24 +27,41 @@
 
 .left_icon {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-start;
+  align-content: space-between;
+  width: 4cm;
 }
 
 .left_icon_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 4cm;
+  font-size: 1cm;
+}
+.rigth_icon_container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: .8cm;
 }
 
 .icon_container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .link{
-  
+
   font-size: 5cm;
 }
 
+.keyword{
+  font-size: 0.2cm;
+}
+
+.bell{
+  color: red;
+}

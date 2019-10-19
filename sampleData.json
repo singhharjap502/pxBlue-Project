@@ -28,7 +28,7 @@
         "subtitle": "5 Alarms",
         "deviceCount": 13,
         "alarmCount": 5,
-        "eventCount": 23,
+        "eventCount": 3,
         "commStatus": "Online",
         "values": {
             "temperature": 112,

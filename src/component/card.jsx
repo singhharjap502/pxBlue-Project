@@ -21,10 +21,8 @@ import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
 
 const Cards = (props)=>{
 return(
-  <div>
     <div className="cards">
     <MuiThemeProvider theme={createMuiTheme(PXBThemes.blueDark)}>
-
     {props.data.map(
       (destination,index)=>{
         return <Card key={index} className="card">
@@ -36,44 +34,44 @@ return(
     <CardContent className="card_content">
       <Grid className="icon_container">
       <Grid className="left_icon_container">
-        <Grid className="left_icon">
-        <BellIcon></BellIcon>
-        <Typography>{destination.alarmCount || 0}</Typography>
+        <Grid className="left_icon" id={"bell "+index}>
+        <BellIcon ></BellIcon>
+        <Typography >  {destination.alarmCount || 0} Alarm</Typography>
         </Grid>
-        <Grid className="left_icon">
-        <EventIcon></EventIcon>
-        <Typography>{destination.eventCount || 0}</Typography>
+        <Grid className="left_icon" id={"event "+index}>
+        <EventIcon ></EventIcon>
+        <Typography >  {destination.eventCount || 0} Events</Typography>
         </Grid>
-        <Grid className="left_icon">
+        <Grid className="left_icon" >
           <CloudCircleIcon></CloudCircleIcon>
-          <Typography>{destination.commStatus || 0}</Typography>
+          <Typography>   {destination.commStatus || 0}</Typography>
         </Grid>
       </Grid>
       <Grid className="rigth_icon_container">
       <div>
-        {destination.values.temperature && <Grid>
+        {destination.values.temperature && <Grid >
           <i className="pxb-temp"></i>
           <Typography>{destination.values.temperature}˚F</Typography>
-          <Typography>Temperature</Typography>
-        </Grid> || destination.values.temperature === null && <div>Temperature NA</div>}
+          <Typography className ="keyword">Temperature</Typography>
+        </Grid> || destination.values.temperature === null && <div className ="keyword">Temperature NA</div>}
 
         {destination.values.volume && <Grid>
           <LocalDrinkIcon></LocalDrinkIcon>
           <Typography>{destination.values.volume}KSCF</Typography>
-          <Typography>Volume</Typography>
-        </Grid> || destination.values.volume === null && <div>Volume NA</div>}
+          <Typography className ="keyword">Volume</Typography>
+        </Grid> || destination.values.volume === null && <div className ="keyword">Volume NA</div>}
       </div>
       <div>
         {destination.values.humidity && <Grid>
           <GrainIcon></GrainIcon>
           <Typography>{destination.values.humidity}˚F</Typography>
-          <Typography>Humidity</Typography>
-        </Grid> || destination.values.humidity === null && <div>Humidity NA</div>}
+          <Typography className ="keyword">Humidity</Typography>
+        </Grid> || destination.values.humidity === null && <div className ="keyword">Humidity NA</div>}
         {destination.values.flow && <Grid>
           <WavesIcon></WavesIcon>
           <Typography>{destination.values.flow}KSCF</Typography>
-          <Typography>Flow</Typography>
-        </Grid> || destination.values.flow === null && <div>Flow NA</div>}
+          <Typography className ="keyword">Flow</Typography>
+        </Grid> || destination.values.flow === null && <div className ="keyword">Flow NA</div>}
       </div>
 
       </Grid>
@@ -90,9 +88,7 @@ return(
       }
     )}
       </MuiThemeProvider>
-    </div>
   </div>
 )
 }
-
 export default Cards;
