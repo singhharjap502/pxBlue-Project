@@ -76,13 +76,16 @@ return(
 
       </Grid>
       </Grid>
-      <Typography className="link">
+      <div className="bottom_link">
+
+      <Typography >
         <Link component="button" onClick={()=>{
           alert("No location given")
         }}>
         View Loaction
         </Link>
       </Typography>
+      </div>
     </CardContent>
     </Card>
       }
